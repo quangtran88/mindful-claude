@@ -1,0 +1,17 @@
+{
+  "name": "mindful-claude-marketplace",
+  "description": "Mindful Claude reasoning framework plugin for Claude Code",
+  "owner": {
+    "name": "quangtran88"
+  },
+  "plugins": [
+    {
+      "name": "mindful-claude",
+      "description": "Buddhist reasoning framework that maps Buddhist cognitive concepts to AI failure modes — improves reasoning quality via CLAUDE.md instructions and PreToolUse enforcement hooks",
+      "version": "1.0.0",
+      "source": "./",
+      "category": "reasoning",
+      "tags": ["reasoning", "mindfulness", "hooks", "quality"]
+    }
+  ]
+}

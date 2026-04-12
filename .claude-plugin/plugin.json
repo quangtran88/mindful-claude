@@ -1,0 +1,20 @@
+{
+  "name": "mindful-claude",
+  "version": "1.0.0",
+  "description": "Buddhist reasoning framework that maps Buddhist cognitive concepts to AI failure modes — improves reasoning quality via CLAUDE.md instructions and PreToolUse enforcement hooks",
+  "author": {
+    "name": "quangtran88"
+  },
+  "homepage": "https://github.com/quangtran88/mindful-claude",
+  "repository": "https://github.com/quangtran88/mindful-claude",
+  "license": "MIT",
+  "keywords": [
+    "reasoning",
+    "mindfulness",
+    "buddhist",
+    "hooks",
+    "quality",
+    "cognitive-framework"
+  ],
+  "skills": "./skills/"
+}
