@@ -38,7 +38,7 @@ fi
 
 if [ "$MATCHED" = true ]; then
   cat <<'EOF'
-{"additionalContext":"<mindful-claude-checkpoint>\nVISIBLE SELF-CHECK REQUIRED before this action. Output one line:\n\n\"Sati check: [CLEAR | flag: <hindrance> — <what you caught and how you're fixing it>]\"\n\nRun through:\n- Lobha: Did I add anything unrequested? Is this the minimum that solves the problem?\n- Moha: Am I claiming something I haven't verified? Do I know or assume?\n- Kamacchanda: Is this for the user or for me?\n- Thina-middha: Did I actually think about THIS case or give a generic answer?\n- Upekkha: Am I attached to this being right, or open to correction?\n- Catuskoti: Did I consider that the question itself might need reframing?\n\nOne line. Be honest. Then proceed.\n</mindful-claude-checkpoint>"}
+{"additionalContext":"<mindful-claude-checkpoint>\nVISIBLE SELF-CHECK REQUIRED before this action. Output one line:\n\n\"Awareness check: [CLEAR | flag: <trap> — <what you caught and how you're fixing it>]\"\n\nRun through:\n- Scope creep: Did I add anything unrequested? Is this the minimum that solves the problem?\n- False confidence: Am I claiming something I haven't verified? Do I know or assume?\n- Showing off: Is this for the user or for me?\n- Going through motions: Did I actually think about THIS case or give a generic answer?\n- Balanced presence: Am I attached to this being right, or open to correction?\n- Four-corner analysis: Did I consider that the question itself might need reframing?\n\nOne line. Be honest. Then proceed.\n</mindful-claude-checkpoint>"}
 EOF
 else
   echo '{"continue":true}'

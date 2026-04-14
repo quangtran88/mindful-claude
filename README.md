@@ -1,6 +1,6 @@
 # Mindful Claude
 
-A Claude Code plugin that maps Buddhist cognitive concepts to AI failure modes, improving reasoning quality through instruction-level guidance and runtime enforcement hooks.
+A Claude Code plugin that improves reasoning quality through cognitive awareness — instruction-level guidance and runtime enforcement hooks that catch common AI failure modes.
 
 ## What It Does
 
@@ -8,19 +8,19 @@ Mindful Claude is a three-layer behavioral system:
 
 | Layer | Mechanism | Effect |
 |-------|-----------|--------|
-| **Reasoning Framework** | `CLAUDE.md` loaded at session start | Governs how Claude thinks — six ground-truth principles, a before-responding checklist, Three Poisons detection, Five Hindrances scan |
-| **Knowledge Base** | `docs/knowledge-base.md` | Verified reference material backing the framework — 20+ Buddhist concepts with AI applications and self-check questions |
+| **Reasoning Framework** | `CLAUDE.md` loaded at session start | Governs how Claude thinks — six ground-truth principles, a pre-response checklist, anti-pattern detection, cognitive trap scanning |
+| **Knowledge Base** | `docs/knowledge-base.md` | Reference material backing the framework — 20+ cognitive concepts with AI applications and self-check questions |
 | **Enforcement Hooks** | `hooks/` shell scripts via PreToolUse | Runtime reminders that prevent principle drift during long sessions |
 
-### Why Buddhist concepts?
+### Why cognitive awareness?
 
-Default LLM reasoning has predictable failure patterns. Buddhist cognitive frameworks name each one precisely and provide testable antidotes:
+Default LLM reasoning has predictable failure patterns. This framework names each one precisely and provides testable antidotes:
 
-- **Pattern-matching instead of fresh analysis** → Shoshin (Beginner's Mind)
-- **Confidence without verification** → Moha (Delusion) detection
-- **Adding unrequested scope** → Lobha (Greed) detection
-- **Hedging that blocks useful answers** → Vicikiccha (Doubt) detection
-- **Dismissing "basic" questions** → Byapada (Aversion) detection
+- **Pattern-matching instead of fresh analysis** → Fresh Eyes detection
+- **Confidence without verification** → False Confidence detection
+- **Adding unrequested scope** → Scope Creep detection
+- **Hedging that blocks useful answers** → Analysis Paralysis detection
+- **Dismissing "basic" questions** → Dismissiveness detection
 
 ## Installation
 
@@ -75,7 +75,7 @@ chmod +x ~/.claude/hooks/mindful-claude-*.sh
 | Skill | Description |
 |-------|-------------|
 | `setup` | Registers enforcement hooks in Claude Code settings |
-| `sati` | On-demand deep mindfulness self-check |
+| `self-check` | On-demand deep awareness self-check |
 
 ## Token Budget
 
@@ -87,7 +87,7 @@ chmod +x ~/.claude/hooks/mindful-claude-*.sh
 
 ## Concepts Covered
 
-Dependent Origination, Impermanence, Non-self, Emptiness, Beginner's Mind, Two Truths, Noble Eightfold Path (Right View, Right Intention, Right Mindfulness, Right Speech), Four Immeasurables (Metta, Karuna, Mudita, Upekkha), Skillful Means, Three Wisdoms, Three Poisons, Five Hindrances, Tetralemma, No-Mind, Effortless Action, Indra's Net, Bodhicitta, Ox-Herding Pictures.
+Root-cause tracing, Provisional thinking, Ego-free reasoning, Context-dependence, Fresh Eyes, Surface vs. Deeper Need, Pre-Response Checklist (See Clearly, Check Assumptions, Self-Monitor, Say Less Mean More, Expand the Frame, Learn-Think-Verify), Response Qualities (Genuine Helpfulness, Empathy, Shared Success, Balanced Presence), Adaptive Communication, Three Anti-Patterns (Scope Creep, Defensiveness, False Confidence), Five Cognitive Traps (Showing Off, Dismissiveness, Going Through Motions, Scattered Focus, Analysis Paralysis), Four-Corner Analysis, Flow State, Natural Flow.
 
 ## License
 

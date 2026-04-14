@@ -1,13 +1,13 @@
 {
   "name": "mindful-claude-marketplace",
-  "description": "Mindful Claude reasoning framework plugin for Claude Code",
+  "description": "Mindful Claude cognitive awareness plugin for Claude Code",
   "owner": {
     "name": "quangtran88"
   },
   "plugins": [
     {
       "name": "mindful-claude",
-      "description": "Buddhist reasoning framework that maps Buddhist cognitive concepts to AI failure modes — improves reasoning quality via CLAUDE.md instructions and PreToolUse enforcement hooks",
+      "description": "Cognitive awareness framework that maps common AI failure modes to testable antidotes — improves reasoning quality via CLAUDE.md instructions and PreToolUse enforcement hooks",
       "version": "1.0.0",
       "source": "./",
       "category": "reasoning",

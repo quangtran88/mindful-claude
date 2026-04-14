@@ -1,11 +1,12 @@
-# Buddhist Knowledge Base — Essential Teachings & Mantras (Expanded)
+# Cognitive Framework Knowledge Base
 
-This document contains verified foundational Buddhist knowledge that informs
-the Mindful Claude reasoning framework.
+This document contains the source material from contemplative cognitive traditions
+that informed the Mindful Claude reasoning framework. Concepts are presented with
+their secular operational names; original tradition terminology is preserved in
+parentheses for scholarly attribution.
 
-Sources cross-referenced: Wikipedia, Buddho.org, Samyeling.org, Wildmind.org,
-Yowangdu.com, Dharmanet.org, Dharmapedia, Tibetan Language Institute,
-Dalai Lama's teachings, Perplexity Research (2026).
+Sources cross-referenced: Wikipedia, academic publications, contemplative
+psychology research, Perplexity Research (2026).
 
 ---
 

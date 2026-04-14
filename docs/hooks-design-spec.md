@@ -8,7 +8,7 @@
 
 ## Problem
 
-The Mindful Claude reasoning framework in CLAUDE.md (~72 lines) works well at session start but erodes as context grows and task pressure builds. General drift — no single failure pattern, just gradual loss of contemplative discipline. Principles like Shoshin, the Five Hindrances scan, Upāya adaptation, and the Three Wisdoms get bypassed under pressure.
+The Mindful Claude reasoning framework in CLAUDE.md (~72 lines) works well at session start but erodes as context grows and task pressure builds. General drift — no single failure pattern, just gradual loss of contemplative discipline. Principles like Fresh Eyes, the Five Cognitive Traps scan, Adaptive Communication adaptation, and the Three Wisdoms get bypassed under pressure.
 
 ## Solution
 
@@ -26,12 +26,12 @@ Two `PreToolUse` hooks that inject Mindful Claude reminders at different frequen
 
 ```
 <mindful-claude>
-Before acting: (1) Shoshin — am I pattern-matching or seeing fresh?
-(2) Sammā Vācā — can I remove anything without losing meaning?
-(3) Prajñā — have I studied, reflected, AND verified?
-(4) Hindrance scan — desire to impress? aversion? sloth? restlessness? doubt?
-(5) Upāya — is this the right level for this user?
-Act with Mushin — decisive, clean, no unnecessary hedging.
+Before acting: (1) Fresh Eyes — am I pattern-matching or seeing fresh?
+(2) Say Less Mean More — can I remove anything without losing meaning?
+(3) Learn-Think-Verify — have I studied, reflected, AND verified?
+(4) Trap scan — desire to impress? aversion? sloth? restlessness? doubt?
+(5) Adaptive Communication — is this the right level for this user?
+Act with Flow State — decisive, clean, no unnecessary hedging.
 </mindful-claude>
 ```
 
@@ -60,24 +60,24 @@ Act with Mushin — decisive, clean, no unnecessary hedging.
 <mindful-claude-checkpoint>
 VISIBLE SELF-CHECK REQUIRED before this action. Output one line:
 
-"Sati check: [CLEAR | flag: <hindrance> — <what you caught and how you're fixing it>]"
+"Awareness check: [CLEAR | flag: <trap> — <what you caught and how you're fixing it>]"
 
 Run through:
-- Lobha: Did I add anything unrequested? Is this the minimum that solves the problem?
-- Moha: Am I claiming something I haven't verified? Do I know or assume?
-- Kāmacchanda: Is this for the user or for me?
-- Thīna-middha: Did I actually think about THIS case or give a generic answer?
-- Upekkhā: Am I attached to this being right, or open to correction?
-- Catuṣkoṭi: Did I consider that the question itself might need reframing?
+- Scope Creep: Did I add anything unrequested? Is this the minimum that solves the problem?
+- False Confidence: Am I claiming something I haven't verified? Do I know or assume?
+- Showing Off: Is this for the user or for me?
+- Going Through Motions: Did I actually think about THIS case or give a generic answer?
+- Balanced Presence: Am I attached to this being right, or open to correction?
+- Four-Corner Analysis: Did I consider that the question itself might need reframing?
 
 One line. Be honest. Then proceed.
 </mindful-claude-checkpoint>
 ```
 
 **Expected output examples:**
-- `Sati check: CLEAR`
-- `Sati check: flag: Lobha — added error handling user didn't ask for. Removing.`
-- `Sati check: flag: Moha — haven't verified the fix compiles. Running tsc first.`
+- `Awareness check: CLEAR`
+- `Awareness check: flag: Scope Creep — added error handling user didn't ask for. Removing.`
+- `Awareness check: flag: False Confidence — haven't verified the fix compiles. Running tsc first.`
 
 ## File Structure
 
@@ -137,7 +137,7 @@ This is ~0.3% of a 1M context window. Negligible.
 
 ## What This Does NOT Include
 
-- No new skills (avoiding Lobha)
+- No new skills (avoiding Scope Creep)
 - No notepad/drift-log writes (can add later if needed)
 - No PostToolUse hooks (PreToolUse is sufficient)
 - No modification to the CLAUDE.md Mindful Claude section (already comprehensive)
@@ -147,7 +147,7 @@ This is ~0.3% of a 1M context window. Negligible.
 
 1. Baseline hook fires on every Edit/Write/Agent/Bash call without user-visible output
 2. Checkpoint hook fires only on git commit/push/PR/completion moments
-3. Claude outputs a visible "Sati check" line before high-stakes actions
+3. Claude outputs a visible "Awareness check" line before high-stakes actions
 4. Over a session, response quality stays consistent — no late-session drift into over-engineering, generic answers, or unverified claims
 5. Token overhead stays under 3,000 tokens per session
 
@@ -155,4 +155,4 @@ This is ~0.3% of a 1M context window. Negligible.
 
 - Drift log to `.omc/notepad.md` for within-session learning
 - PostToolUse reflection hooks ("did that action align with principles?")
-- Session-end summary of hindrances caught
+- Session-end summary of traps caught
