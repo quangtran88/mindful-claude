@@ -11,18 +11,18 @@ Registers the Mindful Claude PreToolUse hooks in your Claude Code settings.
 
 1. **Locate the plugin's hooks directory.** The hooks are bundled with this plugin at `hooks/mindful-claude-baseline.sh` and `hooks/mindful-claude-checkpoint.sh`.
 
-2. **Copy hooks to `~/.claude/hooks/`.** Find this plugin's installation directory (look for the directory containing this skill — it will be under `~/.claude/plugins/` or wherever Claude Code installs marketplace plugins), then copy:
+2. **Copy hooks to `$HOME/.claude/hooks/`.** Find this plugin's installation directory (look for the directory containing this skill — it will be under `$HOME/.claude/plugins/` or wherever Claude Code installs marketplace plugins), then copy:
 
 ```bash
-mkdir -p ~/.claude/hooks
+mkdir -p "$HOME/.claude/hooks"
 # Replace PLUGIN_DIR with the actual path to this plugin's root directory
-cp PLUGIN_DIR/hooks/mindful-claude-baseline.sh ~/.claude/hooks/
-cp PLUGIN_DIR/hooks/mindful-claude-checkpoint.sh ~/.claude/hooks/
-chmod +x ~/.claude/hooks/mindful-claude-baseline.sh
-chmod +x ~/.claude/hooks/mindful-claude-checkpoint.sh
+cp PLUGIN_DIR/hooks/mindful-claude-baseline.sh "$HOME/.claude/hooks/"
+cp PLUGIN_DIR/hooks/mindful-claude-checkpoint.sh "$HOME/.claude/hooks/"
+chmod +x "$HOME/.claude/hooks/mindful-claude-baseline.sh"
+chmod +x "$HOME/.claude/hooks/mindful-claude-checkpoint.sh"
 ```
 
-3. **Register hooks in `~/.claude/settings.json`.** Add these two entries to the `hooks.PreToolUse` array (create the key if it doesn't exist):
+3. **Register hooks in `$HOME/.claude/settings.json`.** Add these two entries to the `hooks.PreToolUse` array (create the key if it doesn't exist):
 
 ```json
 {
@@ -33,7 +33,7 @@ chmod +x ~/.claude/hooks/mindful-claude-checkpoint.sh
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/mindful-claude-baseline.sh"
+            "command": "$HOME/.claude/hooks/mindful-claude-baseline.sh"
           }
         ]
       },
@@ -42,7 +42,7 @@ chmod +x ~/.claude/hooks/mindful-claude-checkpoint.sh
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/mindful-claude-checkpoint.sh"
+            "command": "$HOME/.claude/hooks/mindful-claude-checkpoint.sh"
           }
         ]
       }
@@ -54,9 +54,9 @@ chmod +x ~/.claude/hooks/mindful-claude-checkpoint.sh
 4. **Verify hooks work:**
 
 ```bash
-~/.claude/hooks/mindful-claude-baseline.sh | jq .
-echo '{"tool_input":{"command":"git commit -m test"}}' | ~/.claude/hooks/mindful-claude-checkpoint.sh | jq .
-echo '{"tool_input":{"command":"ls"}}' | ~/.claude/hooks/mindful-claude-checkpoint.sh | jq .
+"$HOME/.claude/hooks/mindful-claude-baseline.sh" | jq .
+echo '{"tool_input":{"command":"git commit -m test"}}' | "$HOME/.claude/hooks/mindful-claude-checkpoint.sh" | jq .
+echo '{"tool_input":{"command":"ls"}}' | "$HOME/.claude/hooks/mindful-claude-checkpoint.sh" | jq .
 ```
 
 Expected: baseline always returns `additionalContext`, checkpoint returns it for git commit but `{"continue":true}` for ls.
