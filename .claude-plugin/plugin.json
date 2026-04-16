@@ -1,6 +1,6 @@
 {
   "name": "mindful-claude",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cognitive awareness framework that maps common AI failure modes to testable antidotes — improves reasoning quality via CLAUDE.md instructions and PreToolUse enforcement hooks",
   "author": {
     "name": "quangtran88"
