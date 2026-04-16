@@ -26,9 +26,19 @@ Default LLM reasoning has predictable failure patterns. This framework names eac
 
 ### As a Claude Code marketplace plugin
 
-```bash
-claude plugin add --marketplace github:quangtran88/mindful-claude
+**Step 1 — Add the marketplace:**
+
 ```
+/plugin marketplace add quangtran88/mindful-claude
+```
+
+**Step 2 — Install the plugin:**
+
+```
+/plugin install mindful-claude@quangtran88/mindful-claude
+```
+
+Or use the interactive UI — run `/plugin`, go to the **Discover** tab, and select the plugin.
 
 The `CLAUDE.md` reasoning framework loads automatically on every session.
 
